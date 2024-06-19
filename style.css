@@ -1,0 +1,758 @@
+@font-face {
+    font-family: AmplifyHandwriting;
+    src: url(AmplifyHandwriting.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* -----------Home Page Styling ------------------*/
+
+nav{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 200px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    
+
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #FBDA20;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+ 
+.btn{
+background: none;
+border: 1px solid #000000;
+text-transform: uppercase;
+padding: 12px 20px;
+min-width: 200px;
+margin: 10px;
+cursor: pointer;
+transition: color 0.4s linear;
+position: relative;
+color: #000000;
+}
+
+.btn:hover{
+    color: #FBDA20;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7 );
+}
+
+.standardBtn::before{
+    transform: scaleX(0);
+}
+
+.standardBtn:hover::before{
+    transform: scaleX(1);
+}
+
+
+.section-top{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position:relative;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/delivery.jpg);
+    /* background-position: center ; */
+    background-position:  0% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 13s infinite ease-in-out;
+}
+
+@keyframes change{
+    0%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/delivery.jpg);
+        background-position:  0% 25%;
+    }
+    20%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/Buffdriver.jpg);
+    }
+    40%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/truck.jpg);
+    }
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.content img{
+    width: 300px;
+}
+
+.content h1{
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+
+.content span{
+    color: #FBDA20; 
+}
+
+.content p{
+    color: #fff;
+    font-size: 18px;
+}
+
+.search-bar{
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    margin-top: 35px;
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 17px 14px;
+    font-size: 18px;
+    color: #fff;
+
+}
+
+.search-bar input::placeholder {
+    color: #fff;
+    opacity: 0.9; 
+}
+
+.search-bar button i{
+    width: 30px;
+    color: #fff;
+}
+
+.search-bar button:hover i {
+    color: #FBDA20;
+}
+
+.search-bar button{
+   border: 0;
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   background: #000;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+
+
+
+
+
+
+.slogan h2{
+    font-size: 55px;
+    color: #fff;
+    line-height: .91;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-family: AmplifyHandwriting; 
+    -webkit-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    margin: 60px 0px 0px 0px ;
+    line-height: 60px;
+} 
+
+.info-buffalo{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.info-buffalo h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.info-buffalo p{
+    color:#777;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.info-buffalo h1 span{
+    color: #FBDA20;
+}
+
+.service-row{
+  margin-top: 4%;
+  display: flex;
+  justify-content: space-between;  
+}
+
+.service-col{
+    flex-basis: 31%;
+    background-color: #F0F0DB;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.service-col h3{
+   text-align: center;
+   font-weight: 600;
+   margin: 10px 0;
+}
+.service-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.goal{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.goal h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.goal p{
+    color:#777;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+
+.goal-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.goal-col{
+  flex-basis: 45%; 
+  border-radius: 10px; 
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 6px solid #FBDA20 ;
+}
+
+.goal-col img{
+    width: 100%;
+    height: 100%;
+}
+
+.layer{
+    background: rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.layer h3{
+    font-family: AmplifyHandwriting;
+    margin-top: 15%;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+.layer p{
+    color: #fff;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.seo-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.seo-section p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.seo-img{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.seo-img img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.seo-img:hover img{
+    transform: scale(1.2);
+}
+
+.seo-content{
+    flex: 1;
+}
+
+.seo-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+   
+}
+
+.seo-content p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #777;
+}
+
+.seo-content .read-more{
+    display: inline-block;
+    padding: 12px 18px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 12px;
+    margin-top: 25px;
+    transition: 0.3s ease;
+}
+
+.seo-content .read-more:hover{
+    color: #FBDA20;
+}
+
+
+
+
+/*-------------- Service Page-------------- */
+
+.section-top-service{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position:relative;
+    background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(./Images/service-img.jpg);
+    background-position: 0% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: service 13s infinite ease-in-out;
+}
+
+@keyframes service{
+    0%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(./Images/service-img.jpg);
+        background-position: 0% 25%;
+    }
+    20%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(./Images/air-freight.jpg);
+    }
+    40%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(./Images/truck-driver.jpg);
+    }
+}
+
+.content h2{
+    font-size: 60px;
+}
+
+.service-title{
+    font-family: AmplifyHandwriting;
+    letter-spacing: 2px;
+    font-size: 100px;
+    margin-bottom: 40px;
+}
+
+.service-wrapper{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.service-content{
+    padding: 10% 0;
+}
+
+.service-content h2{
+    margin: 14px 0;
+    font-size: 30px;
+}
+
+.service-content p{
+    width: 85%;
+    margin: auto;
+    font-size: 14px;
+}
+
+.service-content a{
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.icon{
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.icon i{
+    color: #000;
+    line-height: 80px;
+    font-size: 30px;
+}
+
+.single-box{
+    width: 400px;
+    height: 400px;
+    margin: 0 15px;
+    transition: .7s;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/airplane-flying.jpg);
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+}
+
+.single-box:nth-child(2){
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/packaging.jpg); 
+    background-size: cover;
+    background-position: center center;
+}
+
+.single-box:nth-child(3){
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/courier-driver.jpg); 
+    background-size: cover;
+    background-position: center center;
+}
+
+.single-box:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.support-container{
+    width: 100%;
+    height:50vh;
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./Images/help-line.jpg);
+    background-size: cover;
+    background-position:  0% 25%;
+    margin-bottom: 30px;
+}
+
+.banner-text h2{
+    color: #fff;
+    font-size: 35px;
+    letter-spacing: 1px;
+    padding: 20px 100px;
+
+}
+
+.banner-text h1{
+    font-size: 60px;
+    color: #fff;
+    font-family: AmplifyHandwriting;
+    padding: 10px 100px;
+    letter-spacing: 1px;
+}
+
+.banner-text button{
+    font-size: 18px;
+    color: #fff;
+    background: #000;
+    padding: 12px 35px;
+    margin: 40px 100px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    border: none;
+    transition: 0.3s all ease-in-out;
+}
+
+.banner-text button:hover{
+
+    color:#FBDA20;
+}
+
+
+/* -------------About Page------------- */
+
+.section-top-about{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position:relative;
+    background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(./Images/team.jpg);
+    background-position: 0% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: about 13s infinite ease-in-out;
+}
+
+@keyframes about{
+    0%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(./Images/team.jpg);
+        background-position: 0% 25%;
+    }
+    20%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(./Images/motivation.jpg);
+    }
+    40%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(./Images/drivers.jpg);
+    }
+}
+
+.about-p{
+    color: #000 !important;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 10px; /* Add padding to ensure it doesn't touch the edges */
+}
+
+.timeline-container {
+    padding: 10px 40px; /* Adjust padding to ensure proper spacing */
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.timeline-container:nth-child(1){
+    animation-delay: 0s;
+}
+
+.timeline-container:nth-child(2){
+    animation-delay: 1s;
+}
+
+.timeline-container:nth-child(3){
+    animation-delay: 2s;
+}
+
+.timeline-container:nth-child(4){
+    animation-delay: 3s;
+}
+
+
+.text-box {
+    padding: 20px 30px;
+    background: #F0F0DB;
+    position: relative;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow for better visibility */
+}
+
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+    transform: translateX(-10px); /* Adjust positioning to avoid overlap */
+}
+
+.timeline-container img {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    top: 32px;
+    z-index: 10; 
+}
+
+.left-container img {
+    right: -20px;
+}
+
+.right-container img {
+    left: -26px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+
+    background: #FBDA20;
+    top: 0;
+    left: 50%;
+    margin-left: -11px;
+    transform: translateX(50%); /* Center the line */
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+   0%{
+    height: 0;
+   } 
+   100%{
+    height: 100%;
+   }
+}
+
+.text-box h2{
+   font-weight: 600;
+   margin-bottom: 10px;
+}
+
+
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 39px;
+    z-index: 1;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #F0F0DB;
+    right: -6px;
+    
+}
+
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 39px;
+    z-index: 1;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #F0F0DB;
+    left: -6px;
+}
+
+/*---------- Tracking Order Page----------- */
+
+.section-top-track{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position:relative;
+    background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(./Images/tracking-order.jpg);
+    background-position: 5% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    /* animation: about 5s infinite ease-in-out; */
+}
